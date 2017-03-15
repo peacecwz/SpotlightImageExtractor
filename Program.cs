@@ -22,10 +22,18 @@ namespace SpotlightImageExtractor
             int i = 1;
             foreach (string file in files)
             {
+                string type = "";
                 try
                 {
-                    // Not avaiable for .NET Core. I will complete here
-                    //Image img = Image.FromFile(file);
+                    using(var image = FreeImageAPI.FreeImageBitmap.FromFile(file))
+                    {
+                        if (image.Height == 1920 & image.Width == 1080)
+                            type = "Mobile-";
+                        else if (image.Height == 1080 & image.Width == 1920)
+                            type = "Desktop-";
+                        else
+                            throw new Exception();
+                    }
                 }
                 catch
                 {
@@ -38,9 +46,10 @@ namespace SpotlightImageExtractor
                 if (!Directory.Exists(imageDir))
                     Directory.CreateDirectory(imageDir);
                 FileInfo fileInfo = new FileInfo(file);
-                if (File.Exists(imageDir + fileInfo.Name + ".jpg"))
-                    File.Delete(imageDir + fileInfo.Name + ".jpg");
-                fileInfo.CopyTo(imageDir + fileInfo.Name + ".jpg");
+                string newPath = $"{imageDir}{type}{fileInfo.Name.Substring(0,5)}.jpg";
+                if (File.Exists(newPath))
+                    File.Delete(newPath);
+                fileInfo.CopyTo(newPath);
                 Console.WriteLine($"Copied: {i}/{files.Length}");
                 i++;
             }
