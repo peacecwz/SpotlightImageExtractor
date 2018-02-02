@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 namespace SpotlightImageExtractor
 {
     class Program
-    {
+    { 
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Green;
