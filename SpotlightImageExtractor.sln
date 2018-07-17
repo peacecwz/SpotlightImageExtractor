@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotlightImageExtractor", "SpotlightImageExtractor.csproj", "{C3B5E5AA-4DCF-4F3F-8AA4-7F6D21C436DF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SpotlightImageExtractor", "src\SpotlightImageExtractor.csproj", "{D30C97BD-8A36-46C4-B22E-1DCE18013E34}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{05F4BA91-EB06-4308-9416-D5899A647196}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C3B5E5AA-4DCF-4F3F-8AA4-7F6D21C436DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C3B5E5AA-4DCF-4F3F-8AA4-7F6D21C436DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C3B5E5AA-4DCF-4F3F-8AA4-7F6D21C436DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C3B5E5AA-4DCF-4F3F-8AA4-7F6D21C436DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D30C97BD-8A36-46C4-B22E-1DCE18013E34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D30C97BD-8A36-46C4-B22E-1DCE18013E34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D30C97BD-8A36-46C4-B22E-1DCE18013E34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D30C97BD-8A36-46C4-B22E-1DCE18013E34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D30C97BD-8A36-46C4-B22E-1DCE18013E34} = {05F4BA91-EB06-4308-9416-D5899A647196}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F45AD7FF-5DE0-4D37-957D-FDBD06E5152D}
 	EndGlobalSection
 EndGlobal
