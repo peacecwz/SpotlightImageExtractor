@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <PackageId>spotlight-extractor</PackageId>
+    <Authors>Baris Ceviz</Authors>
+    <Product>spotlight-extractor</Product>
+    <Description>Extract Windows 10 Spotlight Image from your ystem32</Description>
+    <Copyright>Copyright @2016 Baris Ceviz</Copyright>
+    <PackageLicenseUrl>https://github.com/peacecwz/SpotlightImageExtractor/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/peacecwz/SpotlightImageExtractor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/peacecwz/SpotlightImageExtractor.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>spotlight,image-extractor,windows-10</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <IsPackable>true</IsPackable>
+    <PackAsTool>true</PackAsTool>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Images\**" />
+    <EmbeddedResource Remove="Images\**" />
+    <None Remove="Images\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FreeImage-dotnet-core" Version="4.3.6" />
+  </ItemGroup>
+</Project>
