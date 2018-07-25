@@ -19,6 +19,19 @@ cd SpotlightImageExtractor
 dotnet run --project ./src/SpotlightImageExtractor.csproj
 ```
 
+Now, you can run it
+
+```
+ SpotlightImageExtractor
+```
+
+Extract spotlight images into working directory. You can navigate with commands
+
+```
+ cd Images
+ explorer .
+```
+
 ## Demo & Guide
 
 You can find [How to develop Global or CLI Tool on .NET Core](https://medium.com/@peacecwz/net-core-global-tool-ve-cli-tool-geli%C5%9Ftirmek-3417ac6c8645) in turkish
